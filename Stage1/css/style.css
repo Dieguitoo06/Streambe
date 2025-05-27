@@ -1,22 +1,102 @@
-body{
-    background-color: papayawhip;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-#Titulo{
-    color: navy;
-    margin-left: 420px;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d3c1ab;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
 }
-.Parrafo{
-    margin-left: 250px;
-    font-style: italic;
+header {
+    text-align: center;
+    margin-bottom: 10px;
 }
-#Causas{
-    margin-top: 50px;
-    margin-left: 100px;
-    font-size: large;
+header h1 {
+    color: #7a5b3c;
+    margin-bottom: 10px;
 }
-ol{
-    font-size: small;
+header img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
-#Fuentes{
-    margin-top: 150px;
+
+nav {
+    background-color: #7a5b3c;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius:10px;
+    box-shadow: 0 0 10px rgba(214, 29, 29, 0.1);
+}
+
+.parrafo {
+    margin-bottom: 15px;
+}
+
+ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+ol li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #2e8fd5;
+}
+
+a:hover {
+    color: #b18748;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 1px solid #7a5b3c;
+    font-size: 14px;
+    color: #666;
+}
+
+footer a {
+    display: inline-block;
+    margin-top: 5px;
+    color: #4495cb;
+}
+#Surgimiento{
+    color: #7a5b3c;
+}
+#Duracion{
+    color: #7a5b3c;
 }
