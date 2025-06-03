@@ -1,0 +1,108 @@
+/* Ejercicio 1 */
+.flex-basic {
+  display: flex;
+  gap: 10px;
+  background-color: #d9e4f5;
+  padding: 10px;
+}
+.flex-basic > div {
+  background-color: #84a9d4;
+  padding: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Ejercicio 2 */
+.flex-dir-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f2d0a4;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.flex-dir-wrap::before {
+  content: attr(class);
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.flex-dir-wrap > div {
+  width: 100px;
+  height: 50px;
+  margin: 5px;
+  background-color: #f7a072;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+.row { flex-direction: row; }
+.row-reverse { flex-direction: row-reverse; }
+.column { flex-direction: column; }
+.column-reverse { flex-direction: column-reverse; }
+
+/* Ejercicio 3 */
+.align-justify {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-between;
+  flex-wrap: wrap;
+  background-color: #daf5d4;
+  height: 200px;
+}
+.align-justify > div {
+  background-color: #7bd389;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+}
+
+/* Ejercicio 4 */
+.flex-order {
+  display: flex;
+  gap: 10px;
+  background-color: #fde2e2;
+  padding: 10px;
+}
+.item {
+  background-color: #f38ba0;
+  color: white;
+  padding: 20px;
+  flex: 1;
+  text-align: center;
+}
+.item1 { order: 3; flex-grow: 1; }
+.item2 { order: 1; flex-grow: 2; align-self: flex-start; }
+.item3 { order: 2; flex-grow: 1; }
+
+/* Ejercicio 5 */
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  border: 2px solid black;
+}
+header, footer {
+  background-color: #89cff0;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+main {
+  display: flex;
+  flex: 1;
+}
+aside {
+  width: 25%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+main section {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+}
