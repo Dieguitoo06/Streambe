@@ -1,0 +1,126 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+section {
+  margin-bottom: 40px;
+}
+h1, h2 {
+  color: #333;
+}
+
+/* Ejercicio 1: Caja Animada */
+.caja-animada {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: #e0e0e0;
+  margin: 20px 0;
+}
+.caja-animada::before {
+  content: "";
+  position: absolute;
+  top: -10px; left: -10px;
+  width: 100%;
+  height: 100%;
+  border: 5px solid red;
+  animation: bordeAnimado 3s infinite alternate;
+}
+@keyframes bordeAnimado {
+  0% {
+    border-color: red;
+    transform: scale(1);
+  }
+  100% {
+    border-color: rgb(60, 255, 0);
+    transform: scale(1.1);
+  }
+}
+
+/* Ejercicio 2: Botón Brillante */
+.boton-brillante {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #6200ee;
+  color: white;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+.boton-brillante::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-20deg);
+}
+.boton-brillante:hover::after {
+  animation: brillo 0.8s ease forwards;
+}
+@keyframes brillo {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Ejercicio 3: Mensaje Emergente */
+.mensaje-emergente {
+  position: relative;
+  padding: 15px;
+  background-color: #e3f2fd;
+  border-left: 5px solid #2196f3;
+}
+.mensaje-emergente::after {
+  content: "🔔";
+  position: absolute;
+  right: -30px;
+  opacity: 0;
+  animation: aparecer 3s infinite;
+}
+@keyframes aparecer {
+  0% {
+    right: -30px;
+    opacity: 0;
+  }
+  50% {
+    right: 5px;
+    opacity: 1;
+  }
+  100% {
+    right: -30px;
+    opacity: 0;
+  }
+}
+
+/* Ejercicio 4: Tarjeta Informativa */
+.tarjeta {
+  position: relative;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.tarjeta::before {
+  content: "INFO";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #ff5722;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  animation: rotar 2s infinite linear;
+}
+@keyframes rotar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
