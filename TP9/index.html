@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Prestadores</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <form action="https://formspree.io/f/tu_endpoint" method="POST">
+    <fieldset>
+      <legend>Datos Personales</legend>
+
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required minlength="3">
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" placeholder="Ej: 1123456789" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Servicio Ofrecido</legend>
+
+      <label for="tipo">Tipo de servicio:</label>
+      <select id="tipo" name="tipo" required>
+        <option value="">Seleccione una opción</option>
+        <option value="electricidad">Electricidad</option>
+        <option value="plomeria">Plomería</option>
+        <option value="gas">Gas</option>
+        <option value="pintura">Pintura</option>
+      </select>
+
+      <label for="experiencia">Experiencia (años):</label>
+      <input type="number" id="experiencia" name="experiencia" min="0" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Información Adicional</legend>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+      <label for="documento">Subir documentación (opcional):</label>
+      <input type="file" id="documento" name="documento" accept=".pdf,.jpg,.png">
+    </fieldset>
+
+    <button type="submit">Enviar formulario</button>
+  </form>
+
+</body>
+</html>

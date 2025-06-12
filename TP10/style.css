@@ -1,0 +1,97 @@
+/* Estilos generales para escritorio */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f2f2f2;
+  color: #333;
+}
+
+header {
+  background: #007BFF;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.contenido {
+  flex: 2;
+  padding-right: 20px;
+}
+
+.sidebar {
+  flex: 1;
+  background: #e0e0e0;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+/* Breakpoint: tablets */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .contenido, .sidebar {
+    padding: 10px 0;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 10px;
+  }
+}
+
+/* Breakpoint: móviles */
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  .sidebar {
+    background: #d0d0d0;
+  }
+}
